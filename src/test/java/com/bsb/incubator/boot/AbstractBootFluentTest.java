@@ -11,6 +11,7 @@ import org.junit.BeforeClass;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.Environment;
 
 /**
  * @author Sebastien Gerard
@@ -41,5 +42,13 @@ public abstract class AbstractBootFluentTest extends FluentTest {
 
     protected ApplicationContext getContext() {
         return context;
+    }
+
+    protected String getServerUrl() {
+        final Environment environment = getContext().getEnvironment();
+        final Integer port = environment.getProperty("server.port", Integer.class);
+        final String contextPath = environment.getProperty("server.contextPath", String.class, "");
+
+        return "http://localhost:" + port + contextPath;
     }
 }
