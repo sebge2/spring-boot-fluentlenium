@@ -1,4 +1,4 @@
-package com.bsb.incubator.boot;
+package be.sgerard.incubator.boot;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

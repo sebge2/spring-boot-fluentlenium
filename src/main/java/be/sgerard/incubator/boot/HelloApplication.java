@@ -1,4 +1,4 @@
-package com.bsb.incubator.boot;
+package be.sgerard.incubator.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class HelloWebXml {
+public class HelloApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HelloWebXml.class, args);
+        SpringApplication.run(HelloApplication.class, args);
     }
 }

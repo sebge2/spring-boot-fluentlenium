@@ -1,4 +1,4 @@
-package com.bsb.incubator.boot;
+package be.sgerard.incubator.boot;
 
 import static org.fest.assertions.fluentlenium.FluentLeniumAssertions.*;
 import static org.fluentlenium.core.filter.FilterConstructor.*;

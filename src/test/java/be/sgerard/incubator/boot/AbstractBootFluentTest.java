@@ -1,4 +1,4 @@
-package com.bsb.incubator.boot;
+package be.sgerard.incubator.boot;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
@@ -12,6 +12,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
+
+import be.sgerard.incubator.boot.HelloApplication;
 
 /**
  * @author Sebastien Gerard
@@ -27,7 +29,7 @@ public abstract class AbstractBootFluentTest extends FluentTest {
                     new Callable<ConfigurableApplicationContext>() {
                         @Override
                         public ConfigurableApplicationContext call() throws Exception {
-                            return SpringApplication.run(HelloWebXml.class);
+                            return SpringApplication.run(HelloApplication.class);
                         }
                     });
         context = future.get(60, TimeUnit.SECONDS);

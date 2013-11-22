@@ -18,7 +18,7 @@
         <fluentlenium.version>0.9.1</fluentlenium.version>
         <tomcat.version>7.0.42</tomcat.version>
 
-        <spring.boot.start>com.bsb.incubator.boot.HelloWebXml</spring.boot.start>
+        <spring.boot.start>be.sgerard.incubator.boot.HelloApplication</spring.boot.start>
         <spring.boot.server.port>8080</spring.boot.server.port>
     </properties>
 
